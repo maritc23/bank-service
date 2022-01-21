@@ -5,7 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
+import java.util.Date;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
@@ -18,11 +18,13 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Builder
 @Scope(scopeName = "request", proxyMode = ScopedProxyMode.TARGET_CLASS)
 @Document
-public class Account {
+public class ClientType {
     @Id
     int id;
-    String clientId;
-    String productId;
-    String accountNumber;
-    Double balance;
+    String type;
+    Integer maxAllowedSavingsAccount;
+    Integer maxAllowedCurrentAccount;
+    Integer maxAllowedFixedTermAccounts;
+    
+
 }

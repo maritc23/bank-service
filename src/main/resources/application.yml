@@ -1,0 +1,17 @@
+dbport: '27017'
+dbname: Banking
+spring:
+  application:
+    name: banking-service
+  cloud:
+    config:
+      uri: localhost:8888
+logging:
+  level:
+    org:
+      springframework:
+        boot:
+          autoconfigure: ERROR
+client:
+  service:
+    url: http://localhost:8081/
